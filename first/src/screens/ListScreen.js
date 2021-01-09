@@ -28,11 +28,12 @@ const ListScreen = () =>{
 const styles = StyleSheet.create({
     textStyle:{
         fontSize:20,
-        color:'#ffffff',
-        marginVertical: 30,
+        color:'#00fff9',
+        marginVertical: 10,
+        marginLeft:10,
     },
     viewStyle: {
-        backgroundColor: "#ff00ff",
+        backgroundColor: "#000000",
         borderColor: '#ecfd00',
         borderWidth: 5,
     }

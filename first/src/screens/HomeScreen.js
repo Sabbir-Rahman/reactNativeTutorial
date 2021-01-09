@@ -2,7 +2,7 @@ import React from 'react';
 import {Text, StyleSheet, Button, View} from "react-native";
 
 
-const HomeScreen = () => {
+const HomeScreen = (props) => {
     return (
         <View>
             <Text style={styles.textStyle}>Hello this is home screen</Text>
@@ -11,7 +11,7 @@ const HomeScreen = () => {
                 title="Go to List screen"
                 onPress={
                     function () {
-                        console.log("Button pressed")
+                        props.navigation.navigate("List");
                     }
                 }
             />
