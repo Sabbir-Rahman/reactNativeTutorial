@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, StyleSheet, Button, View} from "react-native";
+import {Text, StyleSheet, Button, View, Image} from "react-native";
 
 
 const HomeScreen = (props) => {
@@ -15,9 +15,12 @@ const HomeScreen = (props) => {
                     }
                 }
             />
+            <Image
+            source = {require("./../../assets/reactnativeIcon.png")}
+            />
         </View>
     );
-}
+};
 
 const styles = StyleSheet.create(
     {
@@ -26,6 +29,6 @@ const styles = StyleSheet.create(
             color: 'green'
         },
     }
-)
+);
 
 export default HomeScreen;
