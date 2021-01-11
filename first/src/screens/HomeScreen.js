@@ -15,6 +15,15 @@ const HomeScreen = (props) => {
                     }
                 }
             />
+
+            <Button
+                title={ "Go to Image Screen"}
+                onPress={
+                    function (){
+                        props.navigation.navigate("Image");
+                    }
+                }
+                />
             <TouchableOpacity
                 onPress = {function (){
                     console.log("Local storage image pressed")
