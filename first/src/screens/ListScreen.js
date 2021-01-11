@@ -3,14 +3,14 @@ import {Text, View, StyleSheet, FlatList} from "react-native";
 
 
 const ListScreen = () =>{
-    const uni = [{name: "BUET",},{name:"IUT",},{name:"DU",},{name:"KUET",},{name:"RUET",},{name:"CUET",},{name:"MIST",},
-        {name:"SUST",},{name:"BUP",},{name:"BRAC",},{name:"RU",},]
+    const uni = [{name: "BUET", key: '1'},{name:"IUT",key: '2'},{name:"DU",key: '3'},{name:"KUET",key: '4'},{name:"RUET",key: '5'},{name:"CUET",key: '6'},{name:"MIST",key: '7'},
+        {name:"SUST",key: '8'},{name:"BUP",key: '9'},{name:"BRAC",key: '10'},{name:"RU",key: '11'},]
 
     return(
         <View style={styles.viewStyle}>
             <FlatList
             data = {uni}
-            horizontal = {true}
+
             renderItem = {function ({item}){
                 return(<Text style={styles.textStyle} >{item.name}</Text>);
             }}
