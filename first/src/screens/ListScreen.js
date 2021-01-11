@@ -1,26 +1,19 @@
 import React from 'react';
-import {Text, View, StyleSheet} from "react-native";
+import {Text, View, StyleSheet, FlatList} from "react-native";
 
 
 const ListScreen = () =>{
-    const uni_1 = "IUT";
-    const uni_2 = "BUET";
-    const uni_3 = "DU";
-    const uni_4 = "RUET";
-    const uni_5 = "KUET";
-    const uni_6 = "CUET";
-    const uni_7 = "SUST";
-    const uni_8 = "BRAC";
+    const uni = [{name: "BUET",},{name:"IUT",},{name:"DU",},{name:"KUET",},{name:"RUET",},{name:"CUET",},{name:"MIST",},
+        {name:"SUST",},{name:"BUP",},{name:"BRAC",},{name:"RU",},]
+
     return(
         <View style={styles.viewStyle}>
-            <Text style={styles.textStyle}>{uni_2}</Text>
-            <Text style={styles.textStyle}>{uni_1}</Text>
-            <Text style={styles.textStyle}>{uni_3}</Text>
-            <Text style={styles.textStyle}>{uni_4}</Text>
-            <Text style={styles.textStyle}>{uni_5}</Text>
-            <Text style={styles.textStyle}>{uni_6}</Text>
-            <Text style={styles.textStyle}>{uni_7}</Text>
-            <Text style={styles.textStyle}>{uni_8}</Text>
+            <FlatList
+            data = {uni}
+            renderItem = {function ({item}){
+                return(<Text style={styles.textStyle} >{item.name}</Text>);
+            }}
+            />
         </View>
     );
 }
