@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, StyleSheet, Button, View, Image} from "react-native";
+import {Text, StyleSheet, Button, View, Image, TouchableOpacity} from "react-native";
 
 
 const HomeScreen = (props) => {
@@ -15,15 +15,22 @@ const HomeScreen = (props) => {
                     }
                 }
             />
-            <Image
-            source = {require("./../../assets/reactnativeIcon.png")}
-            />
+            <TouchableOpacity
+                onPress = {function (){
+                    console.log("Local storage image pressed")
+                }}
+            >
+                <Image
+                    source={require("./../../assets/reactnativeIcon.png")}
+                />
+            </TouchableOpacity>
             <Image
 
-                source= {{
-                    height : "300",
-                    width : "200",
-                    uri: " https://picsum.photos/200/300"}}
+                source={{
+                    height: "300",
+                    width: "200",
+                    uri: " https://picsum.photos/200/300"
+                }}
             />
         </View>
     );
