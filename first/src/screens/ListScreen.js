@@ -10,6 +10,7 @@ const ListScreen = () =>{
         <View style={styles.viewStyle}>
             <FlatList
             data = {uni}
+            horizontal = {true}
             renderItem = {function ({item}){
                 return(<Text style={styles.textStyle} >{item.name}</Text>);
             }}
