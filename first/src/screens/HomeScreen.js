@@ -18,6 +18,13 @@ const HomeScreen = (props) => {
             <Image
             source = {require("./../../assets/reactnativeIcon.png")}
             />
+            <Image
+
+                source= {{
+                    height : "300",
+                    width : "200",
+                    uri: " https://picsum.photos/200/300"}}
+            />
         </View>
     );
 };
