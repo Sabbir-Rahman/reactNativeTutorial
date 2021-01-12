@@ -25,8 +25,9 @@ const ImageDetail = (props) =>{
 
 const styles = StyleSheet.create({
     textStyle: {
-        fontSize: 30,
+        fontSize: 20,
         color: "red",
+        width: 100,
 
     },
     imageStyle: {
@@ -36,10 +37,11 @@ const styles = StyleSheet.create({
     },
     viewStyle: {
         borderColor: "green",
-        width: 5,
+        borderWidth:3,
         margin: 5,
         flexDirection: 'row',
-        alignSelf: 'flex-left',
+        alignSelf: "center",
+
     },
 });
 
