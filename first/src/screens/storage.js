@@ -49,9 +49,17 @@ const StorageScreen = () => {
     return (
       <View>
           <Text>Storage Screen</Text>
-          <Button title="Save Data" onPress={function (){}}/>
-          <Button title="Retrieve Data" onPress={function (){}}/>
-          <Button title="Delete Data" onPress={function (){}}/>
+          <Button title="Save Data" onPress={function (){
+              setData("name","Md Sabbir Rahman")
+          }}/>
+
+          <Button title="Retrieve Data" onPress={function (){
+              getData("name");
+          }}/>
+
+          <Button title="Delete Data" onPress={function (){
+              removedata("name");
+          }}/>
       </View>
 
     );
