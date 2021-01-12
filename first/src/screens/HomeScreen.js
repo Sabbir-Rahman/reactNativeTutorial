@@ -36,9 +36,9 @@ const HomeScreen = (props) => {
             <Image
 
                 source={{
-                    height: "300",
-                    width: "200",
-                    uri: " https://picsum.photos/200/300"
+                    height: 300,
+                    width: 400,
+                    uri: "https://picsum.photos/200/300"
                 }}
             />
         </View>

@@ -1,10 +1,13 @@
 import React from 'react';
 import { Text, View, StyleSheet} from "react-native";
+import ImageDetail from "../components/ImageDetail";
 
 const ImageScreen = () => {
     return (
         <View>
-            <Text>Image Screen</Text>
+            <ImageDetail title ="Beach"/>
+            <ImageDetail title="Forest"/>
+            <ImageDetail title="Mountain"/>
         </View>
     );
 };
