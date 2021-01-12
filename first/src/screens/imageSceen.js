@@ -6,7 +6,7 @@ const ImageScreen = () => {
     return (
         <View>
             <ImageDetail title ="Beach"/>
-            <ImageDetail title="Forest"/>
+            <ImageDetail title="Forrest"/>
             <ImageDetail title="Mountain"/>
         </View>
     );
