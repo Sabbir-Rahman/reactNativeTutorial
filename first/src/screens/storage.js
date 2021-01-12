@@ -3,6 +3,17 @@ import {Text, View, Button, AsyncStorage} from "react-native";
 
 
 const StorageScreen = () => {
+
+    let func = async ()=> {
+        await function() {
+            let i = 0;
+            for (i=0;i< 1000000000; i++) {}
+            alert("Done");
+        };
+    };
+
+    func()
+
     return (
       <View>
           <Text>Storage Screen</Text>
