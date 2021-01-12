@@ -62,7 +62,7 @@ const StorageScreen = () => {
         }
     };
 
-    const removedata = async ()=>{
+    const removedata = async (key)=>{
         try {
             await AsyncStorage.removeItem(key);
             alert('Data removed successfully');
