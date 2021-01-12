@@ -4,21 +4,54 @@ import {Text, View, Button, AsyncStorage} from "react-native";
 
 const StorageScreen = () => {
 
-    let func = async ()=> {
-        await function() {
-            let i = 0;
-            for (i=0;i< 1000000000; i++) {}
-            alert("Done");
-        };
+    // let func = async ()=> {
+    //     await function() {
+    //         let i = 0;
+    //         for (i=0;i< 1000000000; i++) {}
+    //         alert("Done");
+    //     };
+    // };
+    //
+    // func();
+
+    const setData = async (key, value)=> {
+        try {
+            await AsyncStorage.setItem(key,value);
+            alert("Data Saved Successfully");
+        } catch (error){
+            alert(error);
+        }
     };
 
-    func()
+    const getData = async (key)=>{
+        try {
+            const data = await AsyncStorage.getItem(key);
+            if(data != null) {
+                alert(data);
+            }
+            else {
+                alert("No value");
+            }
+        } catch (error) {
+            alert(error);
+        }
+    };
+
+    const removedata = async ()=>{
+        try {
+            await AsyncStorage.removeItem(key);
+            alert('Data removed successfully');
+        } catch (error){
+            alert(error)
+        }
+    }
 
     return (
       <View>
           <Text>Storage Screen</Text>
-          <Button title="Get Data" onPress={function (){}}/>
-          <Button title="Remove Data" onPress={function (){}}/>
+          <Button title="Save Data" onPress={function (){}}/>
+          <Button title="Retrieve Data" onPress={function (){}}/>
+          <Button title="Delete Data" onPress={function (){}}/>
       </View>
 
     );
