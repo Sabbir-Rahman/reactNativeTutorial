@@ -38,6 +38,8 @@ const styles = StyleSheet.create({
         borderColor: "green",
         width: 5,
         margin: 5,
+        flexDirection: 'row',
+        alignSelf: 'flex-left',
     },
 });
 
